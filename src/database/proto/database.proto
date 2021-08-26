@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package database;
+import "either.proto";
+import "google/protobuf/empty.proto";
+
+service DatabaseService {
+  rpc getProblem(google.protobuf.Empty) returns (Either);
+}

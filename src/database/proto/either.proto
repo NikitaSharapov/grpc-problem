@@ -1,0 +1,15 @@
+syntax = "proto3";
+package database;
+import "google/protobuf/struct.proto";
+
+message messageForEither {
+  int32 test_id = 1;
+  string test_name = 2; 
+}
+
+message Either {
+  oneof either {
+      google.protobuf.NullValue empty = 1;
+      messageForEither data = 2;
+  }
+}
